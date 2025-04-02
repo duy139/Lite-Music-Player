@@ -11,7 +11,7 @@ Lite Music Player là đồ án học tập của Nhóm 12, nhằm mục đích 
 ## Tính năng chính ✨
 | Tính năng                  | Mô tả                                      |
 |----------------------------|--------------------------------------------|
-| **Giao diện**              | Cử chỉ vuốt mượt mà, tối ưu dọc/ngang, sử dụng chủ đề Material You |
+| **Giao diện**              | Cử chỉ vuốt mượt mà, tối ưu dọc/ngang, sử dụng ViewModel và chủ đề Material You |
 | **Firebase Authentication**| Đăng nhập/quản lý người dùng qua Firebase |
 | **Realtime Database**      | Đồng bộ dữ liệu playlist theo thời gian thực |
 | **Google Cloud**           | Sao lưu và khôi phục dữ liệu nhạc qua Google Drive |

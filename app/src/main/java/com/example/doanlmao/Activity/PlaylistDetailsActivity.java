@@ -1,9 +1,13 @@
 package com.example.doanlmao.Activity;
 
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +35,7 @@ public class PlaylistDetailsActivity extends AppCompatActivity {
     private String playlistName;
     private byte[] coverImage;
     private String note;
+    private ImageView playlistPhoto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,13 +54,25 @@ public class PlaylistDetailsActivity extends AppCompatActivity {
 
         Log.d(TAG, "Playlist ID: " + playlistId + ", Name: " + playlistName + ", Note: " + note);
 
+        boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+
+        if (isLandscape) {
+            playlistPhoto = findViewById(R.id.playlistPhoto);
+            if (coverImage != null) {
+                Bitmap bitmap = BitmapFactory.decodeByteArray(coverImage, 0, coverImage.length);
+                playlistPhoto.setImageBitmap(bitmap);
+            } else {
+                playlistPhoto.setImageResource(R.drawable.baseline_music_note_24);
+            }
+        }
+
         List<Song> songList = getSongsInPlaylist(playlistId);
         Log.d(TAG, "Songs in playlist: " + (songList != null ? songList.size() : "null"));
 
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        songAdapter = new SongAdapter(this, songList != null ? songList : new ArrayList<>(), playlistName, coverImage, note);
+        songAdapter = new SongAdapter(this, songList != null ? songList : new ArrayList<>(), playlistName, coverImage, note, isLandscape);
         songAdapter.setOnBackClickListener(this::finish);
-        songAdapter.setOnAddClickListener(this::showAddOrRemoveDialog); // Thêm listener cho nút "Thêm"
+        songAdapter.setOnAddClickListener(this::showAddOrRemoveDialog);
         recyclerView.setAdapter(songAdapter);
     }
 
@@ -152,9 +169,10 @@ public class PlaylistDetailsActivity extends AppCompatActivity {
 
     private void refreshSongList() {
         List<Song> updatedSongList = getSongsInPlaylist(playlistId);
-        songAdapter = new SongAdapter(this, updatedSongList, playlistName, coverImage, note);
+        boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+        songAdapter = new SongAdapter(this, updatedSongList, playlistName, coverImage, note, isLandscape);
         songAdapter.setOnBackClickListener(this::finish);
-        songAdapter.setOnAddClickListener(this::showAddOrRemoveDialog); // Thêm lại listener
+        songAdapter.setOnAddClickListener(this::showAddOrRemoveDialog);
         recyclerView.setAdapter(songAdapter);
     }
 }

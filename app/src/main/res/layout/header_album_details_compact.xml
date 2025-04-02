@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:gravity="center_vertical">
+
+    <!-- Nút Back -->
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="Back"
+        android:padding="12dp"
+        android:src="@drawable/baseline_arrow_back_ios_new_24" />
+
+    <!-- Container cho tên album và nghệ sĩ -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <!-- Tên Album -->
+        <TextView
+            android:id="@+id/alb_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="album"
+            android:textSize="20sp" />
+
+        <!-- Tên Nghệ Sĩ -->
+        <TextView
+            android:id="@+id/art_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:text="artist"
+            android:textSize="17sp" />
+    </LinearLayout>
+</LinearLayout>

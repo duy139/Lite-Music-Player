@@ -100,7 +100,9 @@ public class SearchFragment extends Fragment {
         albumsButton.setOnClickListener(v -> {
             if (isShowingSongs) {
                 isShowingSongs = false;
-                searchRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2)); // 2 cột cho album
+                // Kiểm tra orientation và set số cột cho album
+                boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+                searchRecyclerView.setLayoutManager(new GridLayoutManager(getContext(), isLandscape ? 4 : 2));
                 searchRecyclerView.setAdapter(albumAdapter);
                 filterData(searchEditText.getText().toString());
                 updateButtonStates();
@@ -177,7 +179,6 @@ public class SearchFragment extends Fragment {
         }
     }
 
-
     private void updateButtonStates() {
         songsButton.setEnabled(!isShowingSongs);
         albumsButton.setEnabled(isShowingSongs);
@@ -209,6 +210,4 @@ public class SearchFragment extends Fragment {
             albumsButton.setTextColor(colorOnPrimary);
         }
     }
-
-
 }

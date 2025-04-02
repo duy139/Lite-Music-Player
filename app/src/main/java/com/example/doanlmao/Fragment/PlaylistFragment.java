@@ -1,6 +1,7 @@
 package com.example.doanlmao.Fragment;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
@@ -95,7 +96,10 @@ public class PlaylistFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_playlist, container, false);
         recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+
+        // Kiểm tra orientation và set số cột
+        boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), isLandscape ? 4 : 2));
         recyclerView.setHasFixedSize(true);
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
@@ -223,7 +227,6 @@ public class PlaylistFragment extends Fragment {
         dialog.show();
     }
 
-
     private void showCreatePlaylistDialog() {
         View dialogView = LayoutInflater.from(getContext()).inflate(R.layout.dialog_create_playlist, null);
         EditText editName = dialogView.findViewById(R.id.edit_playlist_name);
@@ -348,6 +351,4 @@ public class PlaylistFragment extends Fragment {
         super.onResume();
         loadPlaylists();
     }
-
 }
-

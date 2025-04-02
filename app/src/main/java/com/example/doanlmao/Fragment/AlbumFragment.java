@@ -1,6 +1,7 @@
 package com.example.doanlmao.Fragment;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -41,7 +42,7 @@ public class AlbumFragment extends Fragment {
     private AlbumAdapter albumAdapter;
     private static final String TAG = "AlbumFragment";
     private MusicViewModel viewModel;
-    private SongSorter songSorter; // Thêm SongSorter
+    private SongSorter songSorter;
 
     @Nullable
     @Override
@@ -49,7 +50,10 @@ public class AlbumFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_album, container, false);
 
         recyclerView = view.findViewById(R.id.recyclerView);
-        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 2));
+
+        // Kiểm tra orientation và set số cột
+        boolean isLandscape = getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
+        recyclerView.setLayoutManager(new GridLayoutManager(getContext(), isLandscape ? 4 : 2));
         recyclerView.setHasFixedSize(true);
 
         recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
