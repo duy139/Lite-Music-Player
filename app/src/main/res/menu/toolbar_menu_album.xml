@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!-- Icon More (3 chấm) -->
+    <item
+        android:id="@+id/action_more"
+        android:icon="@drawable/baseline_expand_more_24"
+        android:title="Thêm"
+        app:showAsAction="always"
+        app:tint="?attr/colorOnSurface">
+    </item>
+</menu>

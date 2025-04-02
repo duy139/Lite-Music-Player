@@ -1,0 +1,9 @@
+<resources>
+    <style name="Theme.DoAnLmao" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:navigationBarColor">?attr/colorSurface</item>
+
+        <item name="android:windowBackground">#121212</item> <!-- Đảm bảo nền tối -->
+        <item name="android:textColor">#E0E0E0</item> <!-- Chữ sáng -->
+    </style>
+</resources>

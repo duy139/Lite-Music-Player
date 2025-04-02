@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Thông tin người dùng -->
+        <LinearLayout
+            android:id="@+id/user_info_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/user_photo"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:background="@drawable/rounded_image"
+                android:clipToOutline="true"
+                android:outlineProvider="background"
+                android:scaleType="centerCrop"
+                android:src="@drawable/baseline_account_circle_24"/>
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Tên người dùng"
+                android:textSize="20sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <!-- Cài đặt giao diện -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cài đặt giao diện"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp"/>
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/dark_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Chế độ tối" />
+
+        <com.google.android.material.switchmaterial.SwitchMaterial
+            android:id="@+id/auto_switch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tự động theo hệ thống" />
+
+        <!-- Nút Đăng nhập -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Đăng nhập bằng tài khoản Google"
+            android:visibility="visible"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backup_music_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Sao lưu nhạc lên Google Drive"
+            android:enabled="false" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/restore_music_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Khôi phục nhạc từ Google Drive"
+            android:enabled="false" />
+
+        <!-- Các nút chức năng -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/rescan_folder_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Chọn lại đường dẫn quét nhạc" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/auto_scan_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Tự động quét lại" />
+
+        <!-- Nút đăng xuất -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="24dp"
+            android:text="Đăng xuất"
+            android:visibility="gone"
+            style="@style/Widget.Material3.Button.TextButton"/>
+    </LinearLayout>
+</ScrollView>

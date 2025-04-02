@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <group
+        android:id="@+id/group1"
+        >
+    <item
+        android:id="@+id/header_nav_home"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Trang chủ"
+        android:icon="@drawable/baseline_home_24"/>
+
+    <item
+        android:id="@+id/header_nav_favoriteSongs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Nhạc yêu thích"
+        android:icon="@drawable/baseline_favorite_24"/>
+
+    <item
+        android:id="@+id/header_nav_playlist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Playlist"
+        android:icon="@drawable/baseline_playlist_play_24"/>
+
+    </group>
+
+
+    <group
+        android:id="@+id/group2"
+        >
+    <item
+        android:id="@+id/header_nav_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Cài đặt"
+        android:icon="@drawable/baseline_settings_24"/>
+
+    <item
+        android:id="@+id/header_nav_about"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Thông tin về ứng dụng"
+        android:icon="@drawable/baseline_contact_support_24"/>
+
+    </group>
+
+
+</menu>

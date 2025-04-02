@@ -1,0 +1,66 @@
+[versions]
+agp = "8.8.1"
+androidMavenGradlePlugin = "1.5"
+blurry = "4.0.1"
+cardview = "1.0.0"
+documentfile = "1.0.1"
+firebaseAuth = "23.2.0"
+firebaseDatabase = "21.0.0"
+glide = "4.16.0"
+glideTransformations = "4.3.0"
+googleApiClientAndroid = "2.2.0"
+googleApiServicesDrive = "v3-rev20230822-2.0.0"
+googleHttpClientAndroid = "1.43.3"
+googleServices = "4.4.2"
+jaudiotagger = "2.0.3"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+espressoCore = "3.6.1"
+appcompat = "1.7.0"
+lifecycleLivedata = "2.8.7"
+material = "1.12.0"
+activity = "1.10.1"
+constraintlayout = "2.2.1"
+media = "1.7.0"
+palette = "1.0.0"
+playServicesAuth = "21.3.0"
+renderscript = "1.0.0"
+swiperefreshlayout = "1.1.0"
+viewpager2 = "1.1.0"
+viewpager2Version = "1.0.0"
+
+[libraries]
+android-maven-gradle-plugin = { module = "com.github.dcendents:android-maven-gradle-plugin", version.ref = "androidMavenGradlePlugin" }
+blurry = { module = "jp.wasabeef:blurry", version.ref = "blurry" }
+cardview = { module = "androidx.cardview:cardview", version.ref = "cardview" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+documentfile = { module = "androidx.documentfile:documentfile", version.ref = "documentfile" }
+firebase-auth = { module = "com.google.firebase:firebase-auth", version.ref = "firebaseAuth" }
+firebase-database = { module = "com.google.firebase:firebase-database", version.ref = "firebaseDatabase" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
+glide-transformations = { module = "jp.wasabeef:glide-transformations", version.ref = "glideTransformations" }
+google-api-client-android = { module = "com.google.api-client:google-api-client-android", version.ref = "googleApiClientAndroid" }
+google-api-services-drive = { module = "com.google.apis:google-api-services-drive", version.ref = "googleApiServicesDrive" }
+google-http-client-android = { module = "com.google.http-client:google-http-client-android", version.ref = "googleHttpClientAndroid" }
+google-services = { module = "com.google.gms:google-services", version.ref = "googleServices" }
+jaudiotagger = { module = "org.jaudiotagger:jaudiotagger", version.ref = "jaudiotagger" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+lifecycle-livedata = { module = "androidx.lifecycle:lifecycle-livedata", version.ref = "lifecycleLivedata" }
+lifecycle-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel", version.ref = "lifecycleLivedata" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+media = { module = "androidx.media:media", version.ref = "media" }
+palette = { module = "androidx.palette:palette", version.ref = "palette" }
+play-services-auth = { module = "com.google.android.gms:play-services-auth", version.ref = "playServicesAuth" }
+renderscript = { module = "androidx.renderscript:renderscript", version.ref = "renderscript" }
+swiperefreshlayout = { module = "androidx.swiperefreshlayout:swiperefreshlayout", version.ref = "swiperefreshlayout" }
+viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
+viewpager2-v100 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2Version" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+

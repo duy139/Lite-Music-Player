@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="10dp">
+
+    <!-- Text "Tất cả bài hát" -->
+    <TextView
+        android:id="@+id/all_songs_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:text="Tất cả bài hát"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- LinearLayout chứa các nút -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingBottom="8dp">
+
+        <!-- Hai nút bên trái -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="start"
+            android:orientation="horizontal">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/shuffle_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Xáo trộn"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/baseline_shuffle_24"
+                app:iconGravity="start"
+                app:iconTint="?attr/colorOnPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/play_first_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="?attr/colorPrimary"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="Phát"
+                android:textColor="?attr/colorOnPrimary"
+                android:textSize="14sp"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/baseline_play_arrow_24"
+                app:iconGravity="start"
+                app:iconTint="?attr/colorOnPrimary" />
+        </LinearLayout>
+
+        <!-- Nút More bên phải -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/action_more"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:backgroundTint="?attr/colorPrimary"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/baseline_more_vert_24"
+            app:iconTint="?attr/colorOnPrimary" />
+    </LinearLayout>
+</LinearLayout>

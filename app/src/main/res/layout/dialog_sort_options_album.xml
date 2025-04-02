@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tiêu đề và nút đóng -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sắp xếp theo"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_centerVertical="true" />
+
+        <ImageButton
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Đóng"
+            android:padding="8dp"
+            app:tint="?attr/colorOnSurface" />
+    </RelativeLayout>
+
+    <!-- Sắp xếp theo tên album -->
+    <RadioGroup
+        android:id="@+id/sort_title_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/sort_title_az"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Album (A-Z)"
+            android:textColor="?attr/colorOnSurface" />
+        <RadioButton
+            android:id="@+id/sort_title_za"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tên Album (Z-A)"
+            android:textColor="?attr/colorOnSurface" />
+    </RadioGroup>
+
+    <!-- Sắp xếp theo nghệ sĩ -->
+    <RadioGroup
+        android:id="@+id/sort_artist_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp">
+        <RadioButton
+            android:id="@+id/sort_artist_az"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nghệ sĩ (A-Z)"
+            android:textColor="?attr/colorOnSurface" />
+        <RadioButton
+            android:id="@+id/sort_artist_za"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nghệ sĩ (Z-A)"
+            android:textColor="?attr/colorOnSurface" />
+    </RadioGroup>
+</LinearLayout>

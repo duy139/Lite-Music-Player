@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Thanh nền (background) -->
+    <item android:id="@android:id/background">
+        <shape android:shape="rectangle">
+            <size android:height="8dp" /> <!-- Giảm từ 150dp xuống 8dp -->
+            <solid android:color="#4DFFFFFF" /> <!-- Màu xám nhạt mờ cho nền -->
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+
+    <!-- Thanh tiến trình (progress) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <size android:height="12dp" /> <!-- Giảm từ 150dp xuống 8dp -->
+                <solid android:color="?attr/colorPrimary" /> <!-- Sử dụng màu Material You -->
+                <corners android:radius="8dp" />
+            </shape>
+        </clip>
+    </item>
+</layer-list>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Tiêu đề và nút đóng -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin bài hát"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_centerVertical="true" />
+
+        <ImageButton
+            android:id="@+id/close_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="Đóng"
+            android:padding="8dp"
+            android:tint="?attr/colorOnSurface" />
+
+    </RelativeLayout>
+
+    <!-- Tên bài hát -->
+    <TextView
+        android:id="@+id/song_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên bài hát: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Nghệ sĩ -->
+    <TextView
+        android:id="@+id/artist_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nghệ sĩ: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Album -->
+    <TextView
+        android:id="@+id/album_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Album: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Năm sáng tác -->
+    <TextView
+        android:id="@+id/year_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Năm sáng tác: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Tên file -->
+    <TextView
+        android:id="@+id/name_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tên file: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Thời gian chỉnh sửa -->
+    <TextView
+        android:id="@+id/modified_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thời gian chỉnh sửa: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Thời lượng -->
+    <TextView
+        android:id="@+id/duration_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thời lượng: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <!-- Loại file -->
+    <TextView
+        android:id="@+id/type_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loại file: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Đường dẫn -->
+    <TextView
+        android:id="@+id/path_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Đường dẫn: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="16sp"
+        android:layout_marginBottom="16dp" />
+
+</LinearLayout>

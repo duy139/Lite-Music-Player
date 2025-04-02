@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Tiêu đề -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Thông tin về ứng dụng"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Mô tả ứng dụng -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Lite Music Player là ứng dụng nghe nhạc đa tính năng trên nền tảng Android, được phát triển bởi Nhóm 12 như một đồ án học tập. Ứng dụng tích hợp các công nghệ hiện đại như Firebase và Google Cloud, mang đến trải nghiệm âm thanh tối ưu với giao diện thân thiện, hỗ trợ chỉnh sửa metadata, quản lý playlist và nhiều tính năng nổi bật khác."
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSurface"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Link GitHub -->
+        <TextView
+            android:id="@+id/github_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Đây là link GitHub của dự án: https://github.com/duy139/Lite-Music-Player"
+            android:textSize="14sp"
+            android:textColor="?attr/colorPrimary"
+            android:autoLink="web"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Dòng cuối -->
+        <TextView
+            android:id="@+id/disclaimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dự án này chỉ là đồ án học tập nhằm vượt qua kỳ thi, không phục vụ mục đích thương mại. Mọi tâm huyết đều dành cho việc học hỏi và khám phá công nghệ!"
+            android:textSize="12sp"
+            android:textColor="?attr/colorOnSurfaceVariant"
+            android:textStyle="italic"/>
+    </LinearLayout>
+</ScrollView>

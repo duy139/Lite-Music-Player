@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="?attr/colorSurface">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Ô chọn preset và nút Lưu Preset -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp">
+
+            <Spinner
+                android:id="@+id/preset_spinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="?attr/colorPrimary" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/save_preset_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Lưu tùy chọn"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnPrimary" />
+        </LinearLayout>
+
+        <!-- Hàng 1: Bass, Mid, Treble -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="16dp">
+
+            <!-- Bass -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bass"
+                    android:textColor="?attr/colorOnSurface" />
+                <SeekBar
+                    android:id="@+id/bass_seekbar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:rotation="270"
+                    android:max="30"
+                    android:progress="15"
+                    android:progressDrawable="@drawable/seekbar_material_you"
+                    android:thumb="@null" />
+                <TextView
+                    android:id="@+id/bass_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 dB"
+                    android:textColor="?attr/colorOnSurface" />
+            </LinearLayout>
+
+            <!-- Mid -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mid"
+                    android:textColor="?attr/colorOnSurface" />
+                <SeekBar
+                    android:id="@+id/mid_seekbar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:rotation="270"
+                    android:max="30"
+                    android:progress="15"
+                    android:progressDrawable="@drawable/seekbar_material_you"
+                    android:thumb="@null" />
+                <TextView
+                    android:id="@+id/mid_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 dB"
+                    android:textColor="?attr/colorOnSurface" />
+            </LinearLayout>
+
+            <!-- Treble -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Treble"
+                    android:textColor="?attr/colorOnSurface" />
+                <SeekBar
+                    android:id="@+id/treble_seekbar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:rotation="270"
+                    android:max="30"
+                    android:progress="15"
+                    android:progressDrawable="@drawable/seekbar_material_you"
+                    android:thumb="@null" />
+                <TextView
+                    android:id="@+id/treble_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0 dB"
+                    android:textColor="?attr/colorOnSurface" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Thanh border cắt ngang -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="?attr/colorPrimary" />
+
+        <!-- Hàng 2: Balance, Volume, Reverb -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!-- Balance -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Cân bằng"
+                    android:textColor="?attr/colorOnSurface" />
+                <SeekBar
+                    android:id="@+id/balance_seekbar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:rotation="270"
+                    android:max="200"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/seekbar_material_you"
+                    android:thumb="@null" />
+                <TextView
+                    android:id="@+id/balance_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="?attr/colorOnSurface" />
+            </LinearLayout>
+
+            <!-- Volume -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Âm lượng"
+                    android:textColor="?attr/colorOnSurface" />
+                <SeekBar
+                    android:id="@+id/volume_seekbar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:rotation="270"
+                    android:max="100"
+                    android:progress="100"
+                    android:progressDrawable="@drawable/seekbar_material_you"
+                    android:thumb="@null" />
+                <TextView
+                    android:id="@+id/volume_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100%"
+                    android:textColor="?attr/colorOnSurface" />
+            </LinearLayout>
+
+            <!-- Reverb -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Âm vang"
+                    android:textColor="?attr/colorOnSurface" />
+                <SeekBar
+                    android:id="@+id/reverb_seekbar"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:rotation="270"
+                    android:max="100"
+                    android:progress="0"
+                    android:progressDrawable="@drawable/seekbar_material_you"
+                    android:thumb="@null" />
+                <TextView
+                    android:id="@+id/reverb_level"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0%"
+                    android:textColor="?attr/colorOnSurface" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
