@@ -79,6 +79,4 @@ Xem chi tiết giấy phép:
 - **Github**: [duy139](https://github.com/duy139) (Đại diện nhóm 12)
 
 ---
-**Lưu ý**: Đây là đồ án học tập của Nhóm 12, được phát triển với mục đích thực hành qua môn. Dự án có sự hỗ trợ từ trí tuệ nhân tạo (AI) trong quá trình phát triển để tối ưu hóa ý tưởng và triển khai tính năng. Tuy nhiên, mã nguồn có thể không được tối ưu hóa hoàn toàn và hiệu suất ứng dụng có thể không ổn định trong một số trường hợp. Mọi đóng góp hoặc ý kiến xây dựng xin vui lòng gửi về đại diện nhóm.
-
-
+**Lưu ý**: Đây là đồ án học tập của Nhóm 12, được phát triển với mục đích thực hành và hoàn thành yêu cầu môn học. Dự án có sự hỗ trợ từ trí tuệ nhân tạo (AI) trong quá trình phát triển nhằm tối ưu hóa ý tưởng và triển khai tính năng. Tuy nhiên, mã nguồn có thể chưa được tối ưu hóa hoàn toàn, dẫn đến hiệu suất ứng dụng không ổn định trong một số trường hợp. Mọi ý kiến đóng góp hoặc đề xuất cải thiện xin vui lòng gửi về đại diện nhóm. Phiên bản này là bản công khai của đồ án Nhóm 12, sẽ không còn được cập nhật thêm. Phiên bản nâng cấp, hoàn hiện hơn đã được tách ra khỏi dự án nhóm và đang được tiếp tục phát triển riêng bởi [duy139](https://github.com/duy139).
